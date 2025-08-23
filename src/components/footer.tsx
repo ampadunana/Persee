@@ -38,7 +38,7 @@ export default function Footer() {
       <div className="border-t border-neutral-100 dark:border-neutral-900 py-6">
         <div className="container flex items-center justify-between text-xs text-neutral-500">
           <p>© {new Date().getFullYear()} Revenue404. All rights reserved.</p>
-          <p>Made with ❤️</p>
+          
         </div>
       </div>
     </footer>
