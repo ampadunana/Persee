@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --radius: 12px; }
+html, body, #__next { height: 100%; }
+
+body { @apply bg-white text-neutral-900; }
+.dark body { @apply bg-neutral-950 text-neutral-100; }
+
+/* Grid bg */
+.bg-dot { background-size: 20px 20px; }
+.light-grid { background-image: theme("backgroundImage.grid-light"); background-size: 24px 24px; }
+.dark .dark-grid { background-image: theme("backgroundImage.grid-dark"); background-size: 24px 24px; }
+
+/* Glass */
+.glass {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Glow */
+.brand-glow { position: relative; isolation: isolate; }
+.brand-glow::after {
+  content: ""; position: absolute; inset: -80px; z-index: -1; filter: blur(80px);
+  background: radial-gradient(40% 40% at 50% 50%, #00E5A8 0%, rgba(0,229,168,0.35) 30%, rgba(29,78,216,0.25) 60%, transparent 80%);
+  opacity: 0.8; pointer-events: none;
+}
+
+/* Buttons */
+.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium transition; }
+.btn-primary { @apply bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:opacity-90; }
+.btn-ghost { @apply bg-transparent border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-900; }
