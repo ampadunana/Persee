@@ -10,7 +10,15 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 export const metadata: Metadata = {
   title: "Revenue404 — Keep visitors moving",
   description: "Monitor broken pages, guide lost visitors, and protect your revenue with a modern, real-time dashboard.",
-  icons: { icon: "/favicon.ico" },
+  icons: {
+    icon: [
+      { url: "/rev404_logo_on_black.png", sizes: "32x32", type: "image/png" },
+      { url: "/rev404_logo_on_black.png", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/rev404_logo_on_black.png",
+    apple: "/rev404_logo_on_black.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
