@@ -17,7 +17,6 @@ export const metadata: Metadata = {
       { url: "/favicon-256x256.png", sizes: "256x256", type: "image/png" },
       { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
       { url: "/favicon-128x128.png", sizes: "128x128", type: "image/png" },
-      { url: "/favicon.ico", sizes: "any" },
     ],
     shortcut: "/favicon-512x512.png",
     apple: [
@@ -35,7 +34,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" type="image/png" sizes="256x256" href="/favicon-256x256.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
         <link rel="icon" type="image/png" sizes="128x128" href="/favicon-128x128.png" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon-512x512.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       </head>
