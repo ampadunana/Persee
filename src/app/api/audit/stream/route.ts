@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 type BrokenLink = { url: string; from?: string; status: number };
 type SlowPage = { url: string; ms: number; status: number };
 
-function enc(o: any) {
+function enc(o: any) { // eslint-disable-line @typescript-eslint/no-explicit-any
   return new TextEncoder().encode(`data: ${JSON.stringify(o)}\n\n`);
 }
 function normalizeDomain(input: string) {
@@ -34,7 +34,7 @@ async function tryFetch(url: string, timeoutMs = 10000) {
     const res = await fetch(url, {
       redirect: "follow",
       signal: controller.signal,
-      headers: { "user-agent": "Persee-AuditBot/1.0 (+https://persee.com)" },
+      headers: { "user-agent": "Persee-AuditBot/1.0 (+https://persee.live)" },
     });
     const ms = Date.now() - start;
     const text = await res.text();
@@ -68,7 +68,7 @@ export async function GET(req: Request) {
 
   const stream = new ReadableStream({
     async start(controller) {
-      const push = (o: any) => controller.enqueue(enc(o));
+      const push = (o: any) => controller.enqueue(enc(o)); // eslint-disable-line @typescript-eslint/no-explicit-any
 
       // Validate domain format early
       if (!host || !isLikelyDomain(host)) {

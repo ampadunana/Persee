@@ -20,7 +20,7 @@ export default function SnippetClient() {
   }, []);
 
   const snippet = verify
-    ? `<script defer src="https://cdn.persee.com/v1.js" data-site="${domain}" data-key="${pubKey}" data-verify="${verify}"></script>`
+    ? `<script defer src="https://cdn.persee.live/v1.js" data-site="${domain}" data-key="${pubKey}" data-verify="${verify}"></script>`
     : "";
 
   const submit = (e: React.FormEvent) => {

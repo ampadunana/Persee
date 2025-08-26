@@ -25,12 +25,12 @@ async function tryFetch(url: string, timeoutMs = 10000) {
     const res = await fetch(url, {
       redirect: "follow",
       signal: controller.signal,
-      headers: { "user-agent": "Persee-AuditBot/1.0 (+https://persee.com)" },
+      headers: { "user-agent": "Persee-AuditBot/1.0 (+https://persee.live)" },
     });
     const ms = Date.now() - start;
     const text = await res.text(); // we may parse it
     return { ok: true, status: res.status, ms, text, headers: res.headers };
-  } catch (e) {
+  } catch {
     const ms = Date.now() - start;
     return { ok: false, status: 0, ms, text: "", headers: new Headers() };
   } finally {
