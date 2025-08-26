@@ -13,15 +13,13 @@ export const metadata: Metadata = {
   description: "Monitor broken pages, guide lost visitors, and protect your revenue with a modern, real-time dashboard.",
   icons: {
     icon: [
-      { url: "/favicon-128x128.png", sizes: "128x128", type: "image/png" },
-      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon-256x256.png", sizes: "256x256", type: "image/png" },
-      { url: "/favicon-512x512.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon-128x128.png", sizes: "128x128", type: "image/png" },
     ],
-    shortcut: "/favicon-128x128.png",
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
 };
@@ -30,9 +28,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
       <head>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-128x128.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-128x128.png" />
-        <link rel="shortcut icon" href="/favicon-128x128.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="256x256" href="/favicon-256x256.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="128x128" href="/favicon-128x128.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="theme-color" content="#10b981" />
       </head>
       <body className="min-h-screen antialiased">
         <ThemeProvider>
