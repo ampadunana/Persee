@@ -21,6 +21,7 @@ export default function Navbar() {
       <div className="glass shadow-glass">
         <nav className="container flex h-16 items-center justify-between">
           <Logo />
+
           <div className="hidden md:flex items-center gap-2">
             {links.map((l) => (
               <Link
@@ -37,15 +38,17 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
+
           <div className="flex items-center gap-2">
-            <Link href="/login" className="btn btn-ghost hidden sm:inline-flex">
-              Log in
+            {/* Dashboard login lives ONLY in navbar */}
+            <Link href="/login" className="btn btn-ghost">
+              Dashboard
             </Link>
-            <Link href="/start" className="btn btn-primary">
-              Start free
+            <Link href="/start#audit" className="btn btn-primary">
+              Get audit
             </Link>
-            <Link href="/book-demo" className="btn btn-ghost hidden sm:inline-flex">
-              Book a demo
+            <Link href="/snippet" className="btn btn-ghost">
+              Get snippet
             </Link>
             <ThemeToggle />
           </div>

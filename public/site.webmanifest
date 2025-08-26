@@ -1,15 +1,25 @@
 {
-  "name": "Revenue404",
-  "short_name": "Revenue404",
-  "description": "Keep visitors moving with Revenue404",
+  "name": "Persee",
+  "short_name": "Persee",
+  "description": "Keep visitors moving with Persee",
   "icons": [
     {
-      "src": "/rev404_logo_on_black.png",
+      "src": "/favicon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/rev404_logo_on_black.png",
+      "src": "/favicon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

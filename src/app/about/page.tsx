@@ -1,4 +1,4 @@
-export const metadata = { title: "About — Revenue404" };
+export const metadata = { title: "About — Persee" };
 
 export default function AboutPage() {
   return (

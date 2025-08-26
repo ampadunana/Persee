@@ -1,6 +1,6 @@
 import FeatureGrid from "@/components/feature-grid";
 
-export const metadata = { title: "Features — Revenue404" };
+export const metadata = { title: "Features — Persee" };
 
 export default function FeaturesPage() {
   return (

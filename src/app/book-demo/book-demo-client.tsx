@@ -14,7 +14,7 @@ export default function BookDemoClient() {
     <section className="container py-16">
       <h1 className="text-4xl font-bold tracking-tight">Book a demo</h1>
       <p className="mt-2 text-neutral-600 dark:text-neutral-300">
-        See how Revenue404 keeps visitors on track.
+        See how Persee keeps visitors on track.
       </p>
 
       <form onSubmit={submit} className="mt-8 max-w-md space-y-4">
